@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>UserTop</title>
+<meta name="description" content="xxxxxxxxxxxxxxxxxxxxx">
+<meta name="keywords" itemprop="keywords" content="xxxxxxxxxxxxxxxxxxxxx">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" href="css/sample-cord.css">
+
+</head>
+<body class="sample">
+
+<div class="container">
+
+<div class="introduction">
+	<h1 class="title">Pin<span class="text-color-primary">o</span></h1>
+	<p class="sub-title">CSS framework</p>
+	<p class="m-b-60">インコのように 軽く・扱いやすく・寄り添う</p>
+	<p><span>Pinoはノンデザイナーとの</span><span>共同開発を前提としたフレームワークです。</span></p>
+	<p><span>ちょっとした調整を誰でも簡単に出来る</span><span>仕様を目指してます。</span></p>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Color</h1>
+	<p>色のご利用は計画的に。</p>
+	<div class="p-l-20 p-t-20">
+		<div class="p-b-20">
+			<code>.bg-main</code><div class="color-chip bg-main"></div>
+			<code>.bg-sub</code><div class="color-chip bg-sub"></div>
+			<code>.bg-primary</code><div class="color-chip bg-primary"></div>
+			<code>.bg-text</code><div class="color-chip bg-text"></div>
+			<code>.bg-border</code><div class="color-chip bg-border"></div>
+			<code>.bg-light-border</code><div class="color-chip bg-light-border"></div>			
+		</div>
+		<div>
+			<code>.bg-success</code><div class="color-chip bg-success"></div>
+			<code>.bg-warning</code><div class="color-chip bg-warning"></div>
+			<code>.bg-danger</code><div class="color-chip bg-danger"></div>
+			<code>.bg-erro</code><div class="color-chip bg-erro"></div>
+		</div>
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Media Queries</h1>
+	<p>メディアクエリはmixiで管理しています。<code>@include mq() {}</code></p>
+	<p>引数は入力省略可 | xs（初期値） | sm | md | lg |</p>
+	<div class="contents__inner">
+		<div class="example">
+			<pre>
+				<code>
+	@include mq(xs) { width: 90%; }
+
+	'<span class="tag">xs</span>': "screen and (max-width: 459px)",
+	'<span class="tag">sm</span>': "screen and (min-width: 460px) and (max-width: 767px)",
+	'<span class="tag">md</span>': "screen and (min-width: 768px) and (max-width: 1023px)",
+	'<span class="tag">lg</span>': "screen and (min-width: 1024px)",
+				</code>
+			</pre>
+		</div>
+
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Typography</h1>
+	<div class="contents__inner">
+
+		<h2>Default</h2>
+		<div>
+			<p>テキストのベースサイズは 1.6rem (16px) 行間は 1.8 (28px)</p>			
+		</div>
+
+		<h2>Size Set</h2>
+		<p>フォントサイズを簡易的に指定できます</p>
+		<div>
+			<p><code>.font-size-[ 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 18 | 20 | 22 | 24 | 26 | 28 | 30 | 32 | 40 | 52 | 60 | 72 | 80 ]</code></p>
+			<p>
+				<code>.font-size-12</code><span class="font-size-12">.font-size-12</span>、
+				<code>.font-size-18</code><span class="font-size-18">.font-size-18</span>、
+				<code>.font-size-24</code><span class="font-size-24">.font-size-24</span>
+			</p>
+		</div>
+
+		<h2>Skin Set</h2>
+		<p>フォント周りの各種装飾</p>
+		<div>
+			<p class="m-b-10">
+				<code>a</code><a>Anchor</a>、
+				<code>em</code><em>Emphasis</em>、
+				<code>small</code><small>Small</small>、
+				<code>strong</code><strong>Strong</strong>、
+				<code>u</code><u>Underline</u>
+			</p>
+			<p class="m-b-10">
+				<code>.success</code><span class="success">success</span>
+				<code>.warning</code><span class="warning">warning</span>
+				<code>.error</code><span class="error">error</span>
+			</p>
+			<p class="m-b-10">
+				<code>.text-color-primary</code><span class="text-color-primary">text</span>
+				<code>.text-color-option</code><span class="text-color-option">text</span>
+				<code>.text-color-text</code><span class="text-color-text">text</span>
+			</p>
+		</div>
+
+		<h2>Heading Set</h2>
+		<p>見出しは適切にマークアップしてください。見た目のみ揃えたい場合はclassの方を使ってください。</p>
+		<div>
+			<h1>Heading</h1>
+			<p><code>h1</code>です。<code>.heading-1</code>でも見た目代用できます</p>
+			<h2>Heading</h2>
+			<p><code>h2</code>です。<code>.heading-2</code>でも見た目代用できます</p>
+			<h3>Heading</h3>
+			<p><code>h3</code>です。<code>.heading-3</code>でも見た目代用できます</p>
+			<h4>Heading</h4>
+			<p><code>h4</code>です。<code>.heading-4</code>でも見た目代用できます</p>
+			<h5>Heading</h5>
+			<p><code>h5</code>です。<code>.heading-5</code>でも見た目代用できます</p>
+			<h6>Heading</h6>
+			<p><code>h6</code>です。<code>.heading-6</code>でも見た目代用できます</p>
+		</div>
+
+		<h2>Font Weight</h2>
+		<p>フォントの太さを指定できます</p>
+		<div>
+			<p class="font-weight-normal"><code>.font-weight-normal</code>normal</p>
+			<p class="font-weight-bolder"><code>.font-weight-bolder</code>bolder</p>
+		</div>
+
+		<h2>Align</h2>
+		<p>横方向の揃えを指定できます</p>
+		<div>
+			<p class="align-c"><code>.align-c</code>中央揃え</p>
+			<p class="align-l"><code>.align-l</code>左揃え</p>
+			<p class="align-r"><code>.align-r</code>右揃え</p>
+		</div>
+
+		<h2>Spacing</h2>
+		<p>行間を簡易的に指定できます</p>
+		<div>
+			<code>.spacing-08</code>
+			<p class="spacing-08">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-10</code>
+			<p class="spacing-10">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-11</code>
+			<p class="spacing-11">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-12</code>
+			<p class="spacing-12">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-16</code>
+			<p class="spacing-16">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-18</code>
+			<p class="spacing-18">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+			<code>.spacing-20</code>
+			<p class="spacing-20">行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。行間を確認してください。</p>
+		</div>
+
+	</div>    
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Space</h1>
+	<p>四方、左右、上、下、右、左、にスペースを追加。</p>
+	<div class="contents__inner">
+		<h2>margin</h2>
+		<div>
+			<p><code>.m-[ none | x | t | b | r | l ]-[ 0 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 ]</code></p>
+		</div>
+		<h2>padding</h2>
+		<div>
+			<p><code>.p-[ none | x | t | b | r | l ]-[ 0 | 5 | 10 | 15 | 20 | 25 | 30 | 35 | 40 | 45 | 50 | 55 | 60 ]</code></p>
+		</div>
+
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Layout</h1>
+	<div class="contents__inner">
+		<h2>Float</h2>
+		<div class="p-b-20 clear-fix">
+			<div class="float-l"><code>.float-l</code>左へ回り込み</div>
+			<div class="float-r"><code>.float-r</code>右へ回り込み</div>
+		</div>
+		<div class="clear-fix"><code>.clear-fix</code>回り込み解除</div>
+		<h2>Display</h2>
+		<div class="p-b-20 clear-fix">
+			<div class="display-b bg-01 m-b-10"><code>.display-b</code>block要素</div>
+			<div class="display-i bg-01 m-b-10"><code>.display-i</code>in-line要素</div>
+			<div class="display-f__row-nowrap bg-01 m-b-10"><code>.display-f__row-nowrap</code>flex要素、row nowrap</div>
+			<div class="display-f__column-nowrap bg-01 m-b-10"><code>.display-f__column-nowrap</code>flex要素、column nowrap</div>
+			<div class="display-f__row-wrap bg-01 m-b-10"><code>.display-f__row-wrap</code>flex要素、row wrap</div>
+			<div class="display-f__column-wrap bg-01 m-b-10"><code>.display-f__column-wrap</code>flex要素、column wrap</div>
+		</div>
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Buttons</h1>
+	<p>classの組み合わせでボタンを表現できます。</p>
+	<div class="contents__inner">
+		<h2>Default</h2>
+		<p class="m-b-10"><code>.button</code> + <code>none</code> | <code>.outline</code> | <code>.flat</code></p>
+		<p class="p-b-20">
+			<a class="button" href="#">Default Button</a>
+			<button class="button outline">Outlined Button</button>
+			<input class="button flat" type="submit" value="Flat Button">
+		</p>
+		<h2>Roll</h2>
+		<p class="m-b-10"><code>.button</code> + <code>primary</code> | <code>.secondary</code> | <code>.option</code> | <code>.danger</code></p>
+		<p class="p-b-20">
+			<div class="p-b-20">
+				<a class="button primary" href="#">primary Button</a>
+				<a class="button secondary" href="#">secondary Button</a>
+				<a class="button option" href="#">option Button</a>
+				<a class="button danger" href="#">danger Button</a>
+			</div>
+
+			<div class="p-b-20">
+				<button class="button primary">Primary Button</button>
+				<button class="button secondary">Secondary Button</button>
+				<button class="button option">Option Button</button>
+				<button class="button danger">Danger Button</button>
+			</div>
+
+			<div class="p-b-20">
+				<input class="button primary" type="submit" value="primary Button">
+				<input class="button secondary" type="submit" value="Secondary Button">
+				<input class="button option" type="submit" value="Option Button">
+				<input class="button danger" type="submit" value="Danger Button">
+			</div>
+
+		</p>
+		<h2>Size</h2>
+		<p class="m-b-10"><code>.button</code> + <code>.lg</code> | <code>none(default)</code> | <code>.sm</code> | <code>.xs</code></p>
+		<p class="p-b-20">
+			<a class="button outline lg" href="#">lg Size Button</a>
+			<a class="button outline" href="#">default Size Button</a>
+			<a class="button outline sm" href="#">sm Size Button</a>
+			<a class="button outline xs" href="#">xs Size Button</a>
+		</p>
+		<h2>Block</h2>
+		<p class="m-b-10"><code>.button</code> + <code>.block</code> | <code>.inline-block</code></p>
+		<p class="p-b-20">
+			<a class="button outline block" href="#">block Button</a>
+			<a class="button outline inline-block" href="#">inline-block Button</a>
+		</p>
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Lists</h1>
+	<div class="contents__inner">
+
+		<h2>OL</h2>
+		<div>
+			<p>順番があるリストの時に使ってください</p>
+			<ol>
+				<li>Ordered list item 1</li>
+				<li>Ordered list item 2</li>
+				<li class="no-style"><code>.no-style</code>list-styleを打ち消しできます</li>
+			</ol>
+		</div>
+
+		<h2>DL</h2>
+		<div>
+			<p><code>dt</code>の意味を説明するリストの時に使ってください</p>
+			<dl>
+				<dt>Description list item 1</dt>
+				<dd>Description list item 1.1</dd>
+			</dl>
+		</div>
+
+		<h2>UL</h2>
+		<div>
+			<p><code>OL</code>と<code>DL</code>に沿わないリストの時に使ってください</p>
+			<ul>
+				<li>Unordered list item 1</li>
+				<li>Unordered list item 2
+					<ul>
+						<li class="circle"><code>.circle</code>list-style変更できます</li>
+						<li class="circle"><code>.circle</code>list-style変更できます
+							<ul>
+								<li class="disc"><code>.disc</code>list-style変更できます</li>
+								<li class="disc"><code>.disc</code>list-style変更できます</li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+
+<div class="contents">
+	<h1>Forms</h1>
+	<p class="m-b-10"><code>form</code>内で入力フォームをグルーピングする場合は、<code>fieldset</code>囲ってください。</p>
+	<p class="m-b-10"><code>fieldset</code>にラベルをつける場合は<code>fieldset</code>内の最初の<code>legend</code>に書きます。</p>
+
+	<div class="contents__inner">
+		<form>
+			<p>placeholder、<code>disabled</code>disabled、selected|checked、<code>.success</code>success、<code>.error</code>error、<code>.warning</code>warning、それぞれstyleを用意しています。</p>
+			<fieldset>
+				<input id="text" type="text" placeholder="text...disabled" value="input[type=text]">
+				<input id="text" type="text" placeholder="text...disabled" value="input[type=text] disabled" disabled class="m-t-10">
+				<input id="text" type="text" placeholder="text...success" value="input[type=text] .success" class="success m-t-10">
+				<input id="text" type="text" placeholder="text...error" value="input[type=text] .error" class="error m-t-10">
+				<input id="text" type="text" placeholder="text...warning" value="input[type=text] .warning" class="warning m-t-10">
+				<span class="chip top">.chip .top</span>
+				<span class="chip bottom">.chip .bottom</span>
+				<span class="chip top error">.chip .error</span>
+				<span class="chip bottom warning">.chip .warning</span>
+				<span class="batch circle">+n</span>
+				<span class="batch square">.batch .square</span>
+				<span class="batch square error">.batch .square .error</span>
+				<span class="batch square warning">.batch .square .warning</span>
+				<p class="error"><code>.error</code>error message</p><p class="error"></p>
+				<p><code>.chip</code>、<code>.batch</code>、<code>.error</code>は:emptyでdisplay: none;しています。非表示したい時にタグの間が空になるようにマークアップしてください。</p>
+				<p><例><br>【○】＜p＞＜/p＞ | ＜p＞＜-- comment --＞＜/p＞<br>【×】＜p＞半角スーペース｜改行＜/p＞</p>
+			</fieldset>
+		</form>
+		<form>
+			<fieldset>
+				<legend>Text</legend>
+				<label for="text">label</label>
+				<input id="text" type="text" placeholder="text...">
+			</fieldset>
+
+			<fieldset>
+				<legend>Select</legend>
+				<label for="select">label</label>
+				<select id="select">
+					<option value="" disabled selected>Select...</option>
+					<option value="pino">pino</option>
+					<option value="sabure">sabure</option>
+					<option value="toto">toto</option>
+				</select>
+			</fieldset>
+
+			<fieldset>
+				<legend>TextArea</legend>
+				<label for="textarea">label</label>
+				<textarea id="textarea" placeholder="textarea..."></textarea>
+			</fieldset>
+
+			<fieldset>
+				<legend>CheckBox</legend>
+				<div>
+					<input type="checkbox" id="checkbox-01">
+					<label for="checkbox-01">checkbox-01</label>
+					<input type="checkbox" id="checkbox-02">
+					<label for="checkbox-02">checkbox-02</label>
+				</div>
+			</fieldset>
+
+			<fieldset>
+				<legend>Radio</legend>
+				<div>
+					<input type="radio" name="group-radio" id="name-radio-01" value="radio-01" checked>
+					<label for="name-radio-01">radio-01</label>
+					<input type="radio" name="group-radio" id="name-radio-02" value="radio-02">
+					<label for="name-radio-02">radio-02</label>
+				</div>
+			</fieldset>
+
+			<div class="p-20">
+				<input class="button primary" type="submit" value="Send">
+				<input class="button secondary" type="submit" value="Send">
+				<input class="button option" type="submit" value="Send">
+				<input class="button danger" type="submit" value="Send">				
+			</div>
+
+		</form>
+
+	</div>
+</div>
+<!-- 
+	要素がないとき、アクティブ、フォーカス、ホバー、
+	エラー、成功、ワーニング
+ -->
+ <div class="contents">
+	<h1>Flash Message</h1>
+	<p>うまくいったよとか、ダメだったよとか。</p>
+	<div class="contents__inner">
+		<div class="flashmessage--success"><i>●</i>成功Message</div>
+		<div class="flashmessage--warning"><i>●</i>成功したけど...Message</div>
+		<div class="flashmessage--error"><i>●</i>失敗Message</div>
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+
+<div class="contents">
+	<h1>Tables</h1>
+	<p>表を表す時に使う</p>
+	<div class="contents__inner">
+
+		<table>
+			<caption><code>caption</code>table title and/or explanatory text</caption>
+			<thead>
+				<tr>
+					<th><code>th</code>header</th>
+					<th><code>th</code>header</th>
+					<th><code>th</code>header</th>
+					<th><code>th</code>header</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th><code>th</code>header</th>
+					<td><code>td</code>data</td>
+					<td><code>td</code>data</td>
+					<td><code>td</code>data</td>
+				</tr>
+				<tr>
+					<th><code>th</code>header</th>
+					<td><code>td</code>data</td>
+					<td><code>td</code>data</td>
+					<td><code>td</code>data</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Grids</h1>
+	<div class="contents__inner">
+		<p>親要素に<code>grids</code>子要素に<code>grid-[ 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 ]</code>を入れると12分割で配分されたサイズになります。</p>
+		<p>左右にmarginをつけると分割が崩れてしまうので、</p>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-1 bg-01">.grid-1</div>
+			<div class="grid-11 bg-02">.grid-11</div>			
+		</div>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-2 bg-01">.grid-2</div>
+			<div class="grid-10 bg-02">.grid-10</div>
+		</div>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-3 bg-01">.grid-3</div>
+			<div class="grid-9 bg-02">.grid-9</div>			
+		</div>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-4 bg-01">.grid-4</div>
+			<div class="grid-8 bg-02">.grid-8</div>			
+		</div>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-5 bg-01">.grid-5</div>
+			<div class="grid-6 bg-02">.grid-6</div>			
+		</div>
+		<div class="grids bg-03 m-b-10">
+			<div class="grid-6 bg-01">.grid-6</div>
+			<div class="grid-6 bg-02">.grid-6</div>			
+		</div>
+
+		<p>縦に積みたい場合は親要素の近接セレクタに<code>.column</code>を追加するだけ。</p>
+
+		<div class="grids column bg-03 m-b-10">
+			<div class="grid-4 bg-01">.grid-4　</div>
+			<div class="grid-8 bg-02">.grid-8 数字を指定していても無視されます</div>			
+		</div>
+
+	</div>
+</div>
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Wrapup List</h1>
+	<div class="contents__inner">
+
+		<div class="wrapuplist">
+			<input type="checkbox" id="display-check--01">
+			<div class="wrapuplist__container">
+				<label for="display-check--01">リストA</label>
+				<div>
+					内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<br>
+					id=""とfor=""をイコールにしてくださいね
+				</div>
+			</div>
+			<input type="checkbox" id="display-check--02">
+			<div class="wrapuplist__container">
+				<label for="display-check--02">リストB</label>
+				<div>
+					内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容<br>
+					id=""とfor=""をイコールにしてくださいね
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>Codes</h1>
+	<div class="contents__inner">
+		
+	</div>
+</div>
+
+
+<!-- ////////////////////////////////// -->
+
+
+</div><!-- /container -->
+</body>
+</html>

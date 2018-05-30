@@ -1,0 +1,204 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// sample-cord
+/////////////////////////////////////////
+
+$sample: #BFBFBC;
+$sample-bg: #F0F0ED;
+$code-bg: #f0f0f0;
+$tag:#FF5C46;
+
+// $bass-font-size: 16;
+
+@import "config/config";
+@import "mixin/mixin";
+@import "base";
+
+.bg-primary{background: $color-primary;}
+.bg-sub{background: $color-sub;}
+.bg-text{background: $color-text;}
+.bg-main{background: $color-main;}
+.bg-border{background: $color-border;}
+.bg-light-border{background: $color-light-border;}
+
+.bg-successn{background: $color-success;}
+.bg-warning{background: $color-warning;}
+.bg-danger{background: $color-danger;}
+.bg-error{background: $color-error;}
+
+////////
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size:62.5%;
+}
+body{
+	@include font-size($base-font-size);
+	line-height: 1.8;
+	letter-spacing: .01em;
+	overflow: scroll;
+}
+.sample{
+	background: #fff;
+
+	.container{
+		margin: 0 auto;
+		max-width: 100%;
+		min-width: 100%;
+		width: 100%;
+	}
+	p{
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	.introduction{
+		display: -webkit-flex; /* Safari */
+		display: flex;
+		-webkit-justify-content: center; /* Safari */
+		justify-content:         center;
+		-webkit-flex-direction: column; /* Safari */
+		flex-direction:         column;
+		-webkit-align-items: center; /* Safari */
+		align-items:         center;
+
+		background: $color-main;
+		height: 100vh;
+		text-align: center;
+		width: 100%;
+
+		.title{
+			@include font-size(80);
+			margin: 0;
+		}
+		.sub-title{
+			@include font-size(20);
+			margin: -15px 0 0;
+		}
+		span{
+			display: inline-block;
+			white-space: nowrap;
+		}
+	}
+
+	///////
+
+	.example {
+	    margin: 1rem 0;
+	    position: relative;
+	}
+	pre {
+	    background: $sample-bg;
+	    border-left: 0.3rem solid $tag;
+	    overflow-y: hidden;
+		&>code {
+		    border-radius: 0;
+		    display: block;
+		    padding: 1rem 1.5rem;
+		    white-space: pre;
+		}
+	}
+	code {
+		background: $sample-bg;
+		display: inline-block;
+		border-radius: .4rem;
+		font-size: 86%;
+		margin: 0 .2rem;
+		padding: .2rem .5rem;
+		white-space: nowrap;
+		word-wrap: break-word;
+		word-break: break-all;
+	}
+	form{
+		code {
+			background: darken($sample-bg,8%);
+		}
+	}
+	.tag{
+		color: $tag;
+	}
+
+	.contents{
+		@include mq(xs) {
+			margin: 0 auto;
+			padding: 20px 10px;
+			width: 100%;
+		}
+		@include mq(sm) {
+			margin: 40px auto;
+			width: 90%;
+		}
+		@include mq(md) {
+			margin: 60px auto;
+			width: 80%;
+		}
+		@include mq(lg) {
+			margin: 80px auto;
+			width: 60%;
+		}
+		& > h1,.heading-1{
+			color: $color-primary;			
+		}
+	}
+
+	h,.heading-{
+		&1{
+			margin: 32px 0;
+		}
+		&2{
+			margin: 24px 0;
+		}
+		&3{
+			margin: 20px 0;
+		}
+		&4{
+			margin: 16px 0;
+		}
+		&5{
+			margin: 15px 0;
+		}
+		&6{
+			margin: 10px 0;
+		}
+	}
+	.bg-01{
+		background: darken($sample-bg,5%);
+	}
+	.bg-02{
+		background: darken($sample-bg,15%);
+	}
+	.bg-03{
+		background: darken($sample-bg,40%);
+	}
+
+	.modal{
+		@extend .modal;
+		display: none;
+		z-index: 4;
+	}
+	.sample{
+		display: block;
+		height: auto;
+		position: relative;
+		padding: 30px 0;
+		z-index: 1;
+		.modal__overlay{
+			height: auto;
+			position: absolute;
+		}
+		.modal__wp{
+			width: 95%;
+		}
+	}
+	.modal__input{
+		position: absolute;
+		z-index: 1;
+		&:checked + {
+			.sample-modal{
+				display: -webkit-flex; /* Safari */
+				display: flex;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+// @import "config/config";
+// @import "mixin/mixin";
+
+//_reset.scss
+@import "parts/reset";
+//_config.scss
+@import "config/config";
+//_parts.scss
+@import "parts/parts-basic";
+@import "parts/parts-buttons";
+@import "parts/parts-forms";
+@import "parts/parts-grids";
+@import "parts/parts-tables";
+@import "parts/parts-typography";
+//_module.scss
+@import "modules/module-list";
+@import "modules/module-modal";

@@ -1,0 +1,78 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// Layout
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+////////////////////////
+// wrapper
+////////////////////////
+.container{
+	margin: 0 auto;
+	@include mq(xs) {
+		width: 100%;
+	}
+	@include mq(sm) {
+		width: 92%;
+	}
+	@include mq(md) {
+		max-width: 980px;
+		width: 96%;
+	}
+	@include mq(lg) {
+		min-width: 960px;
+		max-width: 1280px;
+		width: 92%;
+	}
+}
+.contents{
+	@include mq(xs) {
+		margin: 32px auto;
+	}
+	@include mq(sm) {
+		margin: 32px auto;
+	}
+	@include mq(md) {
+		margin: 60px auto;
+	}
+	@include mq(lg) {
+		margin: 60px auto;
+	}
+}
+
+////////////////////////
+// Column
+////////////////////////
+.layout-2column{
+	@include flex-container(row, wrap, stretch, flex-start);
+	@include mq(xs) {
+		@include flex-direction(column);
+	}
+	@include mq(sm) {
+		@include flex-direction(column);
+	}
+	.sub{
+		@include flex(1 1 100%);
+		@include flex-basis((100/12)*3%);
+		padding:10px;
+
+		@include mq(xs) {
+			@include order(5);
+		}
+		@include mq(sm) {
+			@include order(5);
+		}
+	}
+	.main{
+		@include flex(1 1 100%);
+		@include flex-basis((100/12)*9%);
+		padding: 10px;
+		@include mq(xs) {
+			@include order(1);
+		}
+		@include mq(sm) {
+			@include order(1);
+		}
+	}
+}

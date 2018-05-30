@@ -1,0 +1,240 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module-list
+/////////////////////////////////////////
+@import "config/config";
+@import "mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+
+////////////////////////
+//Modal Control
+////////////////////////
+.noscroll{
+	height: 100%;
+	overflow: hidden;
+}
+
+////////////////////////
+//Input
+////////////////////////
+.modal__input{
+	display: block;
+	height: 0;
+	left: -99999px;
+	position: absolute;
+	width: 0;
+	z-index: 1;
+	&:checked + {
+		.modal{
+			display: -webkit-flex; /* Safari */
+			display: flex;
+		}
+	}
+}
+////////////////////////
+//Modal
+////////////////////////
+.modal{
+	bottom: 0;
+	display: none;
+	margin: auto;
+	left: 0;
+	height: 100%;
+	right: 0;
+	top: 0;
+	padding: 40px 0;
+	position: fixed;
+	overflow: scroll;
+	width: 100%;
+}
+////////////////////////
+//Modal
+////////////////////////
+.modal__overlay{
+	background: rgba(#000,0.6);
+	bottom: 0;
+	display: block;
+	height: 120%;
+	left: 0;
+	right: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 0;
+	&:hover,&:active,&:focus{
+		outline: none;
+		border: none;
+	}
+}
+////////////////////////
+//Wp
+////////////////////////
+.modal__wp{
+	margin: auto;
+	z-index: 1;
+	@include mq(xs) {
+		width: 95vw;
+	}
+	@include mq(sm) {
+		width: 86vw;
+	}
+	@include mq(md) {
+		width: 80vw;
+	}
+	@include mq(lg) {
+		width: 60vw;
+	}
+}
+////////////////////////
+//Button
+////////////////////////
+.modal__close{
+	@include border-radius(0,12px,0,0);
+	color: rgba($color-text,0.6);
+	bottom: 0;
+	right: 0;
+	top: 0;
+	text-align: center;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+
+	@include font-size(32);
+	-webkit-display: flex;
+	display: flex;
+	-webkit-align-items: center; /* Safari */
+	align-items:         center;
+	-webkit-justify-content: center; /* Safari */
+	justify-content:         center;
+	padding: 0;
+	width: 52px;
+}
+
+////////////////////////
+//Contents
+////////////////////////
+$modal-padding: 15px;
+.modal__content{
+	background: #FFF;
+	border-radius: 12px;
+	// margin: 10vw 0;
+	position: relative;
+}
+.modal__header{
+	border-bottom: 1px $color-border solid;
+	@include font-size(24);
+	font-weight: bolder;
+	text-align: center;
+	line-height: 1.4;
+	padding: $modal-padding*0.6 $modal-padding;
+	position: relative;
+}
+.modal__body{
+	@include font-size(18);
+	line-height: 1.6;
+	padding: $modal-padding*0.8 $modal-padding;
+	overflow: scroll;
+	&-overflow{
+		@extend .modal__body;
+		max-height: (18px*1.6)*10-$modal-padding;
+		@include mq(xs) {
+			max-height: 80vw;
+		}
+		@include mq(sm) {
+			max-height: 60vw;
+		}
+		@include mq(md) {
+			max-height: 40vw;
+		}
+		@include mq(lg) {
+			max-height: 30vw;
+		}
+	}
+}
+.modal__footer{
+	@include font-size(18);
+	border-top: 1px $color-border solid;
+	width: 100%;
+	&.grids{
+		@include mq(xs) {
+			// -webkit-flex-flow: column wrap; /* Safari */
+			// flex-flow: column wrap;
+		}
+		@include mq(lg) {
+			-webkit-justify-content: center; /* Safari */
+			justify-content:         center;
+		}
+		& div{
+			padding: $modal-padding;
+			@include mq(lg) {
+				-webkit-flex-basis: 30%;
+				-ms-flex-preferred-size: 30%;
+				flex-basis: 30%;
+				text-align: center;
+			}
+			.button{
+				display: inline-block;
+				margin: 0 auto;
+				max-width: 300px;
+				width: 100%;
+			}
+			&:first-child{
+				@include mq(lg) {
+					text-align: right;
+				}
+			}
+			&:last-child{
+				@include mq(lg) {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+
+
+
+////////////////////////
+//Modal Action
+////////////////////////
+.modal__footer-column{
+	&.grids{
+		@include mq(xs) {
+			-webkit-flex-flow: column wrap; /* Safari */
+			flex-flow: column wrap;
+		}
+		@include mq(sm) {
+			-webkit-flex-flow: column wrap; /* Safari */
+			flex-flow: column wrap;
+		}
+		& div{
+			.button{
+				max-width: 100%;
+			}
+			@include mq(xs) {
+				padding: $modal-padding*0.6;
+				&:nth-child(n+2){
+					margin-top:  -$modal-padding*0.5;
+				}
+				&:last-child{
+					padding-top: $modal-padding + 5;
+				}
+			}
+			@include mq(sm) {
+				padding: $modal-padding;
+				&:nth-child(n+2){
+					margin-top:  -$modal-padding;
+				}
+				&:last-child{
+					padding-top: $modal-padding + 5;
+				}
+			}
+		}
+	}
+}
+
+
+

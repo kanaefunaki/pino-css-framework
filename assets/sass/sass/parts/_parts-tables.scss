@@ -1,0 +1,50 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module Tables
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+////////////////////////
+//Tables
+////////////////////////
+table{
+	line-height: 1.2;
+	word-break: break-all;
+	word-wrap: break-word;
+	width: 100%;
+	caption{
+		margin-bottom: 10px;
+	}
+	thead{
+		background: $color-palette-grey;
+		border-bottom: 3px darken($color-palette-grey,60%) solid;
+		text-align: left;
+		width: 100%;
+		tr{}
+		th{
+			padding: 10px;
+		}
+	}
+	tbody{
+		background: lighten($color-palette-grey,50%);
+		tr{
+			border-bottom: 1px darken($color-palette-grey,15%) solid;
+		}
+		th{
+			background: lighten($color-palette-grey,20%);
+			text-align: left;
+			padding: 10px;
+		}
+		td{
+			padding: 10px;
+		}
+	}
+}
+
+
+
+

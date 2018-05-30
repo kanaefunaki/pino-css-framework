@@ -1,0 +1,346 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module bass
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+
+////////////////////////
+//Link
+////////////////////////
+a{
+	color: $link;
+	&:link{
+		color: $link;
+		cursor: pointer;
+	}
+	&:visited{
+		color: desaturate($link,10%);
+		cursor: pointer;
+	}
+	&:hover{
+		color: lighten($link,10%);
+		cursor: pointer;
+	}
+	&:active,&:focus{
+		background: lighten($link,30%);
+		@include border-radius(2px,2px,2px,2px);
+		color: $link;
+		cursor: pointer;
+
+	}
+}
+
+////////////////////////
+//List
+////////////////////////
+ul{
+	list-style: none;
+	li{
+		margin: 10px 0;
+	}
+	& ul,ol,dl{
+		padding-left: $bass-font-size * 2px;
+	}
+	& .no-style{
+		list-style-type: none;
+	}
+	& .disc{
+		list-style-type: disc;
+	}
+	& .circle{
+		list-style-type: circle;
+	}
+}
+ol{
+	padding: 0 $bass-font-size * 1.2px;
+	li{
+		list-style-type: decimal;
+		margin: 10px 0;
+	}	
+	& .no-style{
+		list-style-type: none;
+	}
+}
+dl{
+	dt{
+		font-weight: bolder;
+	}
+	dd{
+		padding-left: $bass-font-size * px;
+	}
+}
+////////////////////////
+//Space
+////////////////////////
+
+	////////////////////////
+	//margin set
+	////////////////////////
+	.m{
+		&-0{margin: 0 !important;
+		&-5{margin: 5px !important;}
+		&-10{margin: 10px !important;}
+		&-15{margin: 15px !important;}
+		&-20{margin: 20px !important;}
+		&-25{margin: 25px !important;}
+		&-30{margin: 30px !important;}
+		&-35{margin: 35px !important;}
+		&-40{margin: 40px !important;}
+		&-45{margin: 45px !important;}
+		&-50{margin: 50px !important;}
+		&-55{margin: 55px !important;}
+		&-60{margin: 60px !important;}
+		&-b{
+			&-0{margin-bottom: 0 !important;}
+			&-5{margin-bottom: 5px !important;}
+			&-10{margin-bottom: 10px !important;}
+			&-15{margin-bottom: 15px !important;}
+			&-20{margin-bottom: 20px !important;}
+			&-25{margin-bottom: 25px !important;}
+			&-30{margin-bottom: 30px !important;}
+			&-35{margin-bottom: 35px !important;}
+			&-40{margin-bottom: 40px !important;}
+			&-45{margin-bottom: 45px !important;}
+			&-50{margin-bottom: 50px !important;}
+			&-55{margin-bottom: 55px !important;}
+			&-60{margin-bottom: 60px !important;}
+		}
+		&-t{
+			&-0{margin-top: 0 !important;}
+			&-5{margin-top: 5px !important;}
+			&-10{margin-top: 10px !important;}
+			&-15{margin-top: 15px !important;}
+			&-20{margin-top: 20px !important;}
+			&-25{margin-top: 25px !important;}
+			&-30{margin-top: 30px !important;}
+			&-35{margin-top: 35px !important;}
+			&-40{margin-top: 40px !important;}
+			&-45{margin-top: 45px !important;}
+			&-50{margin-top: 50px !important;}
+			&-55{margin-top: 55px !important;}
+			&-60{margin-top: 60px !important;}
+		}
+		&-r{
+			&-0{margin-right: 0 !important;}
+			&-5{margin-right: 5px !important;}
+			&-10{margin-right: 10px !important;}
+			&-15{margin-right: 15px !important;}
+			&-20{margin-right: 20px !important;}
+			&-25{margin-right: 25px !important;}
+			&-30{margin-right: 30px !important;}
+			&-35{margin-right: 35px !important;}
+			&-40{margin-right: 40px !important;}
+			&-45{margin-right: 45px !important;}
+			&-50{margin-right: 50px !important;}
+			&-55{margin-right: 55px !important;}
+			&-60{margin-right: 60px !important;}
+		}
+		&-l{
+			&-0{margin-left: 0 !important;}
+			&-5{margin-left: 5px !important;}
+			&-10{margin-left: 10px !important;}
+			&-15{margin-left: 15px !important;}
+			&-20{margin-left: 20px !important;}
+			&-25{margin-left: 25px !important;}
+			&-30{margin-left: 30px !important;}
+			&-35{margin-left: 35px !important;}
+			&-40{margin-left: 40px !important;}
+			&-45{margin-left: 45px !important;}
+			&-50{margin-left: 50px !important;}
+			&-55{margin-left: 55px !important;}
+			&-60{margin-left: 60px !important;}
+		}
+
+	}
+	////////////////////////
+	//padding set
+	////////////////////////
+	.p{
+		&-0{padding: 0 !important;}
+		&-5{padding: 5px !important;}
+		&-10{padding: 10px !important;}
+		&-15{padding: 15px !important;}
+		&-20{padding: 20px !important;}
+		&-25{padding: 25px !important;}
+		&-30{padding: 30px !important;}
+		&-35{padding: 35px !important;}
+		&-40{padding: 40px !important;}
+		&-45{padding: 45px !important;}
+		&-50{padding: 50px !important;}
+		&-55{padding: 55px !important;}
+		&-60{padding: 60px !important;}
+		&-b{
+			&-0{padding-bottom: 0 !important;}
+			&-5{padding-bottom: 5px !important;}
+			&-10{padding-bottom: 10px !important;}
+			&-15{padding-bottom: 15px !important;}
+			&-20{padding-bottom: 20px !important;}
+			&-25{padding-bottom: 25px !important;}
+			&-30{padding-bottom: 30px !important;}
+			&-35{padding-bottom: 35px !important;}
+			&-40{padding-bottom: 40px !important;}
+			&-45{padding-bottom: 45px !important;}
+			&-50{padding-bottom: 50px !important;}
+			&-55{padding-bottom: 55px !important;}
+			&-60{padding-bottom: 60px !important;}
+		}
+		&-t{
+			&-0{padding-top: 0 !important;}
+			&-5{padding-top: 5px !important;}
+			&-10{padding-top: 10px !important;}
+			&-15{padding-top: 15px !important;}
+			&-20{padding-top: 20px !important;}
+			&-25{padding-top: 25px !important;}
+			&-30{padding-top: 30px !important;}
+			&-35{padding-top: 35px !important;}
+			&-40{padding-top: 40px !important;}
+			&-45{padding-top: 45px !important;}
+			&-50{padding-top: 50px !important;}
+			&-55{padding-top: 55px !important;}
+			&-60{padding-top: 60px !important;}
+		}
+		&-r{
+			&-0{padding-right: 0 !important;}
+			&-5{padding-right: 5px !important;}
+			&-10{padding-right: 10px !important;}
+			&-15{padding-right: 15px !important;}
+			&-20{padding-right: 20px !important;}
+			&-25{padding-right: 25px !important;}
+			&-30{padding-right: 30px !important;}
+			&-35{padding-right: 35px !important;}
+			&-40{padding-right: 40px !important;}
+			&-45{padding-right: 45px !important;}
+			&-50{padding-right: 50px !important;}
+			&-55{padding-right: 55px !important;}
+			&-60{padding-right: 60px !important;}
+		}
+		&-l{
+			&-0{padding-left: 0 !important;}
+			&-5{padding-left: 5px !important;}
+			&-10{padding-left: 10px !important;}
+			&-15{padding-left: 15px !important;}
+			&-20{padding-left: 20px !important;}
+			&-25{padding-left: 25px !important;}
+			&-30{padding-left: 30px !important;}
+			&-35{padding-left: 35px !important;}
+			&-40{padding-left: 40px !important;}
+			&-45{padding-left: 45px !important;}
+			&-50{padding-left: 50px !important;}
+			&-55{padding-left: 55px !important;}
+			&-60{padding-left: 60px !important;}
+		}
+	}
+////////////////////////
+//Layout
+////////////////////////
+
+	////////////////////////
+	//Float
+	////////////////////////
+	.float{
+		&-l{float: left !important;}
+		&-r{float: right !important;}
+	}
+	////////////////////////
+	//display
+	////////////////////////
+	.display-b{display: block;}
+	.display-i{display: inline-block;}
+
+	////////////////////////
+	//
+	////////////////////////
+	.chip{
+		background: $color-text;
+		@include border-radius(6px,6px,6px,6px);
+		color: #fff;
+		display: inline-block;
+		line-height: 1.2;
+		padding: 3px 15px;
+		position: relative;
+		word-wrap: break-word;
+		word-break: break-all;
+		z-index: 0;
+		&:after {
+			color: $color-text;
+			display: block;
+			@include font-size(8);
+			line-height: 1.2;
+			position: absolute;
+			z-index: -1;
+		}
+		&.top{
+			margin-bottom: 6px;
+			&:after {
+				content: "▼";
+				bottom: -9px;
+			}
+		}
+		&.bottom{
+			margin-top: 6px;
+			&:after {
+				content: "▲";
+				top: -9px;
+			}
+		}
+		&.error{
+			background: lighten($color-error,15%);
+			&:after {
+				color: lighten($color-error,15%);
+			}
+		}
+		&.warning{
+			background: lighten($color-warning,15%);
+			color: $color-text;
+			&:after {
+				color: lighten($color-warning,15%);
+			}		
+		}
+		&:empty{
+			display: none;
+		}
+	}
+	.batch{
+		background: $information;
+		border: 1px #fff solid;
+		color: #fff;
+		display: inline-block;
+		line-height: 1.2;
+		@include font-size(13);
+		font-weight: bolder;
+		&.circle{
+			@include border-radius(50%,50%,50%,50%);
+			padding: 5px;
+		}
+		&.square{
+			@include border-radius(6px,6px,6px,6px);
+			padding: 5px 10px;
+		}
+		&.error{
+			background: $color-error;
+		}
+		&.warning{
+			background: $color-warning;
+			color: $color-text;
+		}
+		&:empty{
+			display: none;
+		}
+	}
+////////////////////////
+//clear-fix
+////////////////////////
+.clear-fix:after {
+	clear: both;
+	content: "";
+	display: block;
+	text-indent: -9999px;
+	line-height: 0;
+	overflow: hidden;
+}
+

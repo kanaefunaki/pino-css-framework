@@ -1,0 +1,114 @@
+@charset "utf-8";
+/////////////////////////////////////////
+//config
+//定義ファイル
+/////////////////////////////////////////
+
+// - Atomic：原子パーツ名となるクラス名
+// - Module：UI を包括するモジュール名となるクラス名
+// - Skin：装飾などのクラス名
+// - Number：ナンバリング用のクラス名
+// - State：状態を表すクラス名
+// - Other：その他のクラス名。パーツのセマンティックネームもここに含む。
+
+//#ff5c46 オレンジ primary
+//#fcf36f 黄色　main
+//#bfbfbc 濃いグレー
+//#f0f0ed 薄いグレー
+
+////////////////
+// 色相の変更
+// adjust-hue($color, $degrees deg)
+
+// 彩度の変更
+// saturate($color, $amount %)
+// desaturate($color, $amount %)
+
+// 輝度の変更
+// lighten($color, $amount %)
+// darken($color, $amount %)
+
+// 色の反転
+// invert($color)
+
+// グレースケールに変更
+// grayscale($color)
+
+// 色相の補色(色相環の反対色)に変更
+// complement($color)
+
+// 2つのカラーコードの中間色
+// mix($color1, $color2, [$weight])
+// $weightを○○%で指定
+
+////////////////////////
+//Body
+////////////////////////
+	$base-font-size: 16;//px
+
+////////////////////////
+//Color Palette
+////////////////////////
+	$color-palette-orange: #ff5c46;
+	$color-palette-yellow: #fcf36f;
+	$color-palette-grey: #bfbfbc;
+	$color-palette-light-grey: #f0f0ed;
+	$color-palette-black: #222;
+	////////////////////////
+	//Modifier
+	////////////////////////
+	$color-success:#4ece6a;
+	$color-warning:#dfd213;
+	$color-danger:#df2613;
+	$color-error:#df2613;
+
+	////////////////////////
+	//Role
+	////////////////////////
+	$color-primary: $color-palette-orange;
+	$color-option: $color-palette-grey;
+	$color-text: $color-palette-black;
+
+	$color-main: $color-palette-yellow;
+	$color-sub: $color-palette-grey;
+	$color-border: lighten($color-palette-grey,15%);
+	$color-light-border: $color-palette-light-grey;
+	$information:$color-danger;
+
+////////////////////////
+//Link
+////////////////////////
+	$link: $color-primary;
+
+////////////////////////
+//Buttons
+////////////////////////
+	$button: $color-primary;
+	$button-option: $color-option;
+	$button-danger: $color-danger;
+
+////////////////////////
+//Table
+////////////////////////
+
+////////////////////////
+//Foam
+////////////////////////
+
+
+
+////////////////////////
+//Font
+////////////////////////
+$bass-font-size: 16;
+
+
+// darken()
+// saturate()
+// &:hover {
+// color: lighten($color, 15%);
+// text-decoration: underline;
+// }
+// &:visited {
+// color: desaturate($color, 50%);
+// }

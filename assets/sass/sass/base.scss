@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+@import "config/config";
+@import "mixin/mixin";
+
+//_reset.scss
+@import "parts/reset";
+//_config.scss
+@import "config/config";
+//_parts.scss
+@import "parts/parts-basic";
+@import "parts/parts-buttons";
+@import "parts/parts-forms";
+@import "parts/parts-grids";
+@import "parts/parts-tables";
+@import "parts/parts-typography";
+@import "parts/parts-wrapuplist";
+//_module.scss
+@import "modules/module-list";
+@import "modules/module-modal";
+@import "modules/module-pickup-items";
+//layout
+@import "layout/layout";
+@import "layout/header";
+@import "layout/footer";
+
+////////////////////////
+//
+////////////////////////
+*{
+	box-sizing: border-box;
+}
+html{
+	font-size:62.5%;
+}
+body{
+	@include font-size($base-font-size);
+	line-height: 1.8;
+	letter-spacing: .01em;
+	overflow: scroll;
+}
+

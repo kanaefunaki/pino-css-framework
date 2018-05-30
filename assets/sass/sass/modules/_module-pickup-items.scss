@@ -1,0 +1,16 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module-pickup-items
+/////////////////////////////////////////
+@import "config/config";
+@import "mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+//
+.pickup-items{
+	@extend .list-strip;
+
+
+}

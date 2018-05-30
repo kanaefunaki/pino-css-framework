@@ -1,0 +1,138 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module Buttons
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+////////////////////////
+//Buttons
+////////////////////////
+.button{
+	background: $button;
+	border: none;//reset
+	border-color: $button;
+    @include border-radius(6px,6px,6px,6px);
+    cursor: pointer;
+	color: #fff;
+    display: inline-block;
+    @include font-size($base-font-size);
+    font-weight: bolder;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    text-indent: 0;
+    padding: 10px 20px;
+    outline: none;
+	&:link{
+		@extend .button;
+	}
+	&:visited{
+		@extend .button;
+	}
+	&:hover,&:active,&:focus{
+		background: darken($button,10%);
+		color: #fff;
+	}
+    &.outline{
+		background: transparent;
+		border: 1px $button solid;
+		color: $button;
+		&:link{
+			color: $button;
+		}
+		&:visited{
+			border-color: desaturate($button,10%);
+			color: desaturate($button,15%);
+		}
+		&:hover,&:active,&:focus{
+			background: lighten($button,32%);
+			color: darken($button,15%);
+		}
+    }
+    &.flat{
+		background: transparent;
+		border-color: transparent;
+		color: $button;
+		&:link{
+			color: $button;
+		}
+		&:visited{
+			color: desaturate($button,15%);
+		}
+		&:hover,&:active,&:focus{
+			background: lighten($button,30%);
+			border-color: lighten($button,30%);
+			color: darken($button,15%);
+		}
+    }
+	&.primary{
+		@extend .button;
+	}
+	&.secondary{
+		@extend .outline;
+	}
+	&.option{
+		background: $button-option;
+		border-color: $button-option;
+		color: #fff;
+		&:link{
+			@extend .option;
+		}
+		&:visited{
+			background: desaturate($button-option,15%);
+			border-color: desaturate($button-option,15%);
+			color: #fff;
+		}
+		&:hover,&:active,&:focus{
+			background: darken($button-option,15%);
+			border-color: darken($button-option,15%);
+			color: #fff;
+		}
+	}
+	&.danger{
+		background: $button-danger;
+		border-color: $button-danger;
+		color: #fff;
+		&:link{
+			@extend .danger;
+		}
+		&:visited{
+			background: desaturate($button-danger,15%);
+			border-color: desaturate($button-danger,15%);
+			color: #fff;
+		}
+		&:hover,&:active,&:focus{
+			background: darken($button-danger,10%);
+			border-color: darken($button-danger,10%);
+			color: #fff;
+		}
+	}
+	////////////////////////
+	//Size
+	////////////////////////
+	&.lg{
+		@include font-size($base-font-size * 1.4);
+		padding: 12px 30px;
+	}
+	&.sm{
+		@include font-size($base-font-size * .8);
+		padding: 6px 20px;
+	}
+	&.xs{
+		@include font-size($base-font-size * .65);
+		padding: 3px 15px;
+	}
+	////////////////////////
+	//Display
+	////////////////////////
+	&.inline-block{
+		display: inline-block;
+	}
+	&.block{
+		display: block;
+	}
+}

@@ -1,0 +1,61 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// Wrapuplist
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+.wrapuplist{
+	border-bottom: 1px $color-border solid;
+	border-top: 1px $color-border solid;
+	position: relative;
+	.wrapuplist__container{
+		margin-top: -1px;
+		overflow: hidden;
+		& > div{
+			height: 0;
+			overflow: hidden;
+		}
+	}
+	label{
+		border-top: 1px $color-border solid;
+		@include flex-container(row, nowrap, stretch, flex-start);
+		@include justify-content(space-between);
+		padding: 16px 10px;
+		*{
+			@include font-size(15);
+			width: 100%;
+		}
+		&:after{
+			content: "▼";
+			color: $color-primary;
+			height: 20px;
+			width: 20px;
+		}
+	}
+	input[type="checkbox"]{
+		height: 0;
+		left: -99999px;
+		position: absolute;
+		&:checked{
+			& + .wrapuplist__container{
+				height: auto;
+				padding-bottom: 10px;
+				& > div{
+					height: auto;
+					// background: $color-palette-light-grey;
+					padding: 10px;
+				}
+				label{
+					&:after{
+						content: "▲";
+					}
+				}
+			}
+		}
+	}
+}
+

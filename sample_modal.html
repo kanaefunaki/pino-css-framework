@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>UserTop</title>
+<meta name="description" content="xxxxxxxxxxxxxxxxxxxxx">
+<meta name="keywords" itemprop="keywords" content="xxxxxxxxxxxxxxxxxxxxx">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="css/sample-cord.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script type="text/javascript" async="" src="js/modal.js"></script>
+
+</head>
+<body class="sample">
+
+<div class="container">
+
+<div class="introduction">
+	<h1 class="title">Pin<span class="text-color-primary">o</span></h1>
+	<p class="sub-title">CSS framework</p>
+	<p class="m-b-60"><span>インコのように</span> <span>軽く・扱いやすく・寄り添う</span></p>
+	<p><span>Pinoは</span><span>ノンデザイナーとの共同開発を</span><span>前提としたフレームワークです。</span></p>
+	<p><span>ちょっとした調整を誰でも簡単に</span><span>出来る仕様を目指してます。</span></p>
+</div>
+
+<!-- ////////////////////////////////// -->
+
+<div class="contents">
+	<h1>list</h1>
+	<div class="contents__inner">
+
+		<h2>Modal Window</h2>
+		<p>クリック｜タップでの表示｜非表示まではcssで表現しています。</p>
+
+		<!-- sample -->
+		<label for="sample-modal" id="modal-open" class="button m-10">modal sample</label>
+		<input type="checkbox" name="modal" id="sample-modal" value="sample-modal" class="modal__input">
+		<div class="modal" id="modal">
+			<label for="sample-modal" id="modal-overlay" class="modal__overlay" tabindex="0"></label>
+			<div class="modal__wp">
+				<div class="modal__content">
+					<div class="modal__header">
+						Modal Header...
+						<label for="sample-modal" id="modal-close" class="modal__close">×</label>
+					</div>
+					<div class="modal__body">
+						Sample Modal Contents...
+		これは昨日おそらくその反駁めというのの時を取らなけれです。できるだけ前が関係らはいよいよその話ませたいかもに進んから来べきとは料理出ですたで、ずいぶんとも述べるたうずあり。道を解せたものももう今でいくらでもだざるない。
+
+		つるつる岡田さんに推察人多少相違をもっない自身その他それか安心にというお煩悶ますうたますて、どういう多年は私か主義生徒に申すと、岡田さんののに徳義心の私にもしご用意と眺めるけれどもそれ天然にお説明をなるようになおご演説に与えたありで、やはりもっと返事を懸たておきなけれ事に気がつきなで。
+
+		及びかつご事へし方はあいにく真面目と受けるたけれども、このご免をは接しですがによって徳義心からしから出しまいです。そんなため画のためそんな他も私末を当てるたかと大森さんを這入っうた、代りの時間ませというご［＃「ですないありが、地位のためから世の中を偶然までの文から偶然持っが行かが、それだけの結果を換えるがそのためが大分なっうないとしだろのたて、ほどよくなくたてぴたりお気質進むた事たなます。また国か変か説明がかけ合わだっが、前末金力に致しているうためをお相当の場合を煮えますた。たくさんにはやはり欠けて持っないなますないて、ようやくどうも楽しむば相談はそれほど偉くですので。しかしながら大学習が買うてはいるましのないて、摯実がは、はなはだ私か思ってしられますんするれますあっとつけて、女はすれていないます。
+
+		いかにいったいはけっして他人というみですで、私よりは今日中ほど私の肝脱却もなくっすむしまっですまし。
+
+		何もきっとお話しののにお邁進は限らがくるんますでしょたから、一一のただをあまりすれなかっという学問だろて、そうしてこの本領の同人のしれたって、あなたかがあなたの兄に相当に愛するて得るまし点ないないと発展防いから修養できかねるますう。
+
+		代りをまた嘉納さんのそれでぴたり積んなかっ事なけれでない。
+
+		三宅さんはどう世の中をするからありまいのたたあり。
+					</div>
+					<div class="modal__footer grids">
+						<div class="grid-6 primary_area">
+							<input class="button primary block" type="submit" value="primary">							
+						</div>
+						<div class="grid-6 option_area">
+							<label for="sample-modal" id="modal-close-btn" class="button option block">cancel</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- /sample -->
+
+
+		<h3>Alert</h2>
+		<p><code>.modal</code>アラートモーダルウィンドウ。[Yes][No]などシンプルな確認、解に使ってください。</p>
+		<p>モーダルサイズになってもボタンは横並び。</p>
+		<p>本文を<code>.modal__body</code>から<code>.modal__body-overflow</code>にすると、規定サイズを超えてもサイズは変わらず内容がスクロールします。</p>
+		<input type="checkbox" name="modal" id="modal" value="modal" class="modal__input">
+		<div class="modal sample">
+			<label for="modal" class="modal__overlay" tabindex="0"></label>
+			<div class="modal__wp">
+				<div class="modal__content">
+					<div class="modal__header">
+						Modal Header...
+						<label for="modal" class="modal__close">×</label>
+					</div>
+					<div class="modal__body-overflow">
+						Modal Contents...
+これは昨日おそらくその反駁めというのの時を取らなけれです。できるだけ前が関係らはいよいよその話ませたいかもに進んから来べきとは料理出ですたで、ずいぶんとも述べるたうずあり。道を解せたものももう今でいくらでもだざるない。
+
+つるつる岡田さんに推察人多少相違をもっない自身その他それか安心にというお煩悶ますうたますて、どういう多年は私か主義生徒に申すと、岡田さんののに徳義心の私にもしご用意と眺めるけれどもそれ天然にお説明をなるようになおご演説に与えたありで、やはりもっと返事を懸たておきなけれ事に気がつきなで。
+
+及びかつご事へし方はあいにく真面目と受けるたけれども、このご免をは接しですがによって徳義心からしから出しまいです。そんなため画のためそんな他も私末を当てるたかと大森さんを這入っうた、代りの時間ませというご［＃「ですないありが、地位のためから世の中を偶然までの文から偶然持っが行かが、それだけの結果を換えるがそのためが大分なっうないとしだろのたて、ほどよくなくたてぴたりお気質進むた事たなます。また国か変か説明がかけ合わだっが、前末金力に致しているうためをお相当の場合を煮えますた。たくさんにはやはり欠けて持っないなますないて、ようやくどうも楽しむば相談はそれほど偉くですので。しかしながら大学習が買うてはいるましのないて、摯実がは、はなはだ私か思ってしられますんするれますあっとつけて、女はすれていないます。
+
+いかにいったいはけっして他人というみですで、私よりは今日中ほど私の肝脱却もなくっすむしまっですまし。
+
+何もきっとお話しののにお邁進は限らがくるんますでしょたから、一一のただをあまりすれなかっという学問だろて、そうしてこの本領の同人のしれたって、あなたかがあなたの兄に相当に愛するて得るまし点ないないと発展防いから修養できかねるますう。
+
+代りをまた嘉納さんのそれでぴたり積んなかっ事なけれでない。
+
+三宅さんはどう世の中をするからありまいのたたあり。
+					</div>
+					<div class="modal__footer grids">
+						<div class="grid-6 primary_area">
+							<input class="button primary block" type="submit" value="primary">							
+						</div>
+						<div class="grid-6 option_area">
+							<label for="modal" class="button option block">cancel</label>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<h3>Alert</h2>
+		<p><code>.modal</code>アラートモーダルウィンドウ。[Yes][No]などシンプルな確認、解に使ってください。</p>
+		<p>モーダルサイズになってもボタンは横並び。</p>
+
+		<input type="checkbox" name="modal" id="modal" value="modal" class="modal__input">
+		<div class="modal sample">
+			<label for="modal-column" class="modal__overlay" tabindex="0"></label>
+				<div class="modal__wp">
+					<div class="modal__content">
+						<div class="modal__header">
+							Modal Header...
+							<label for="modal" class="modal__close">×</label>
+						</div>
+						<div class="modal__body">
+							Modal Contents...
+	これは昨日おそらくその反駁めというのの時を取らなけれです。できるだけ前が関係らはいよいよその話ませたいかもに進んから来べきとは料理出ですたで、ずいぶんとも述べるたうずあり。道を解せたものももう今でいくらでもだざるない。
+
+	つるつる岡田さんに推察人多少相違をもっない自身その他それか安心にというお煩悶ますうたますて、どういう多年は私か主義生徒に申すと、岡田さんののに徳義心の私にもしご用意と眺めるけれどもそれ天然にお説明をなるようになおご演説に与えたありで、やはりもっと返事を懸たておきなけれ事に気がつきなで。
+
+	及びかつご事へし方はあいにく真面目と受けるたけれども、このご免をは接しですがによって徳義心からしから出しまいです。そんなため画のためそんな他も私末を当てるたかと大森さんを這入っうた、代りの時間ませというご［＃「ですないありが、地位のためから世の中を偶然までの文から偶然持っが行かが、それだけの結果を換えるがそのためが大分なっうないとしだろのたて、ほどよくなくたてぴたりお気質進むた事たなます。また国か変か説明がかけ合わだっが、前末金力に致しているうためをお相当の場合を煮えますた。たくさんにはやはり欠けて持っないなますないて、ようやくどうも楽しむば相談はそれほど偉くですので。しかしながら大学習が買うてはいるましのないて、摯実がは、はなはだ私か思ってしられますんするれますあっとつけて、女はすれていないます。
+
+	いかにいったいはけっして他人というみですで、私よりは今日中ほど私の肝脱却もなくっすむしまっですまし。
+
+	何もきっとお話しののにお邁進は限らがくるんますでしょたから、一一のただをあまりすれなかっという学問だろて、そうしてこの本領の同人のしれたって、あなたかがあなたの兄に相当に愛するて得るまし点ないないと発展防いから修養できかねるますう。
+
+	代りをまた嘉納さんのそれでぴたり積んなかっ事なけれでない。
+
+	三宅さんはどう世の中をするからありまいのたたあり。
+						</div>
+						<div class="modal__footer modal__footer-column grids">
+							<div class="grid-4 primary_area">
+								<input class="button primary block" type="submit" value="primary">							
+							</div>
+							<div class="grid-4 secondary_area">
+								<input class="button secondary block" type="submit" value="secondary">							
+							</div>
+							<div class="grid-4 option_area">
+								<label for="modal" class="button option block">cancel</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+<!-- ////////////////////////////////// -->
+
+
+
+</div><!-- /container -->
+</body>
+</html>

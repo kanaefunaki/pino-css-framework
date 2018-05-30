@@ -1,0 +1,138 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module Forms
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+////////////////////////
+//Forms
+////////////////////////
+form{
+	background: lighten($color-palette-grey,22%);
+	padding: 15px;
+	legend{
+		@extend .heading-4;
+		padding: 20px 0 10px;
+	}
+
+	label{
+		& + input{
+			&[type="checkbox"],
+			&[type="radio"]{
+			margin-left: 20px;
+			}
+		}
+	}
+
+	input{
+		//extend用 
+		&.style{
+			background: #fff;
+			border: 2px $color-border solid;
+			@include border-radius(6px,6px,6px,6px);
+			padding: 5px;
+			&.success{
+				background: lighten($color-success,40%);
+				border-color: desaturate($color-success,20%);
+				color: darken($color-success,35%);
+			}
+			&.warning{
+				background: lighten($color-warning,45%);
+				border-color: desaturate($color-warning,20%);
+				color: darken($color-warning,35%);
+			}
+			&.error{
+				background: lighten($color-error,45%);
+				border-color: desaturate($color-error,20%);
+				color: darken($color-error,35%);
+			}
+		}
+		&.disabled:disabled,
+		&:disabled{
+			background: lighten($color-palette-grey,10%);
+			color: lighten($color-text,25%);
+			cursor: not-allowed;
+			property: value;
+		}
+		&.placeholder{
+			// &::-webkit-input-placeholder,//Chrome
+			// &::-moz-placeholder,//Firefox
+			// &:-ms-input-placeholder,//IE
+			// &::placeholder,
+			&:placeholder-shown{
+				background: lighten($color-warning,45%);
+				color: lighten($color-text,30%);
+			}
+		}
+		&:-webkit-autofill{//
+			background: $color-border;
+
+		}
+		&.focus:focus,
+		&:focus{
+			@extend input.style;
+			background: #fff;
+			border: 2px $color-primary solid;
+			box-shadow: 0 0 7px $color-option;
+			color: $color-text;
+			outline: none;
+		}
+		//////////////////
+		//////////////////
+		&[type="text"]{
+			@extend input.placeholder;
+			@extend input.style;
+			@extend input.focus;
+			@extend input.disabled;
+			width: 100%;
+		}
+
+		&[type="checkbox"]{
+			margin-right: 5px;
+		}
+
+		&[type="radio"]{
+			margin-right: 5px;
+		}
+	}
+
+	textarea{
+		@extend input.placeholder;
+		@extend input.style;
+		@extend input.focus;
+		@extend input.disabled;
+		width: 100%;
+	}
+
+	select{
+		-webkit-appearance : none; /* WebKit で外見をコントロールするため */
+		-moz-appearance : none; /* Gecko で外見をコントロールするため */
+		/* Presto (Opera) および Trident (IE) で外見をコントロールするため
+		 これは Gecko でも動作し、また WebKit でも部分的に作用することに注意 */  
+		@extend input.style;
+		@extend input.focus;
+		@extend input.disabled;
+		width: 100%;
+		option{
+			-webkit-appearance : none; /* WebKit で外見をコントロールするため */
+			-moz-appearance : none; /* Gecko で外見をコントロールするため */
+			/* Presto (Opera) および Trident (IE) で外見をコントロールするため
+			 これは Gecko でも動作し、また WebKit でも部分的に作用することに注意 */  
+
+			// &:disabled::-ms-value,
+			// &:disabled::-ms-expand{
+			// 	@extend input.placeholder;
+			// }
+			// &:disabled{
+			// 	@extend input.disabled;
+			// 	&::-ms-value,::-ms-value{
+			// 		@extend input.disabled;
+			// 	}
+			// }
+		}
+	}
+}

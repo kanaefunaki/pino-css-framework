@@ -1,0 +1,97 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// module Grids
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+.grids{
+	// -webkit-flex-flow: <flex-direction> || <flex-wrap>; /* Safari */
+	// flex-flow:         <flex-direction> || <flex-wrap>;
+	display: -webkit-flex; /* Safari */
+	display: flex;
+	-webkit-flex-flow: row wrap; /* Safari */
+	flex-flow:         row wrap;
+	-webkit-align-items: stretch; /* Safari */
+	align-items:         stretch;
+	-webkit-align-content: flex-start; /* Safari */
+	align-content:         flex-start;
+	&.column{
+		-webkit-flex-direction: column; /* Safari */
+		flex-direction:         column;
+	}
+
+	& .grid{
+		// // -webkit-flex: none | auto | [ <flex-grow> <flex-shrink>? || <flex-basis> ]; /* Safari */
+		// // flex:         none | auto | [ <flex-grow> <flex-shrink>? || <flex-basis> ];
+		-webkit-flex: 1 1 100%; /* Safari */
+		flex: 1 1 100%;
+		&-1{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*1%; /* Safari */
+			flex-basis:         (100/12)*1%;
+		}
+		&-2{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*2%; /* Safari */
+			flex-basis:         (100/12)*2%;
+		}
+		&-3{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*3%; /* Safari */
+			flex-basis:         (100/12)*3%;
+		}
+		&-4{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*4%; /* Safari */
+			flex-basis:         (100/12)*4%;
+		}
+		&-5{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*5%; /* Safari */
+			flex-basis:         (100/12)*5%;
+		}
+		&-6{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*6%; /* Safari */
+			flex-basis:         (100/12)*6%;
+		}
+		&-7{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*7%; /* Safari */
+			flex-basis:         (100/12)*7%;
+		}
+		&-8{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*8%; /* Safari */
+			flex-basis:         (100/12)*8%;
+		}
+		&-9{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*9%; /* Safari */
+			flex-basis:         (100/12)*9%;
+		}
+		&-10{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*10%; /* Safari */
+			flex-basis:         (100/12)*10%;
+		}
+		&-11{
+			@extend .grid;
+			-webkit-flex-basis: (100/12)*11%; /* Safari */
+			flex-basis:         (100/12)*11%;
+		}
+		&-12{
+			@extend .grid;
+			-webkit-flex-basis: 100%; /* Safari */
+			flex-basis:         100%;
+		}
+	}
+}
+
+
+
+

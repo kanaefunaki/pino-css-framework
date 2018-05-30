@@ -1,0 +1,110 @@
+@charset "utf-8";
+/////////////////////////////////////////
+// Typography
+/////////////////////////////////////////
+@import "../config/config";
+@import "../mixin/mixin";
+
+// http://apbcss.com/
+// Atomic Parts Base CSS(APB CSS)　を参考にパーツを作成してます。
+
+////////////////////////
+//Font Set
+////////////////////////
+.font{
+	////////////////////////
+	//Font Size
+	////////////////////////
+	$font-size-values: 8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20, 22, 24, 26, 28, 30, 32, 40, 52, 60, 72, 80;
+	@each $value in $font-size-values {
+		&-size-#{$value} {
+			font-size: $value * 1px !important;
+			font-size: $value * 0.1rem !important;
+		}
+	}
+	////////////////////////
+	//Font Weight
+	////////////////////////
+	&-weight-{
+		&normal{font-weight: normal;}
+		&bolder{font-weight: bolder;}
+	}
+}
+////////////////////////
+//Headers
+////////////////////////
+h,.heading-{
+	&1{
+		@include font-size(40);
+		line-height: 1;
+	}
+	&2{
+		@include font-size(32);
+		line-height: 1;
+	}
+	&3{
+		@include font-size(24);
+		line-height: 1.2;
+	}
+	&4{
+		@include font-size(22);
+		line-height: 1.2;
+	}
+	&5{
+		@include font-size(20);
+		line-height: 1.2;
+	}
+	&6{
+		@include font-size(18);
+		font-weight: bolder;
+		line-height: 1.2;
+	}
+}
+////////////////////////
+//Align
+////////////////////////
+.align-c{text-align: center;}
+.align-l{text-align: left;}
+.align-r{text-align: right;}
+////////////////////////
+//Spacing Set
+////////////////////////
+.spacing{
+	&-20{line-height: 2;}
+	&-18{line-height: 1.8;}
+	&-16{line-height: 1.6;}
+	&-12{line-height: 1.2;}
+	&-11{line-height: 1.1;}
+	&-10{line-height: 1;}
+	&-08{line-height: .8;}
+}
+////////////////////////
+//Modifier
+////////////////////////
+.success{color: $color-success;}
+.warning{color: $color-warning;}
+.error{color: $color-error;}
+
+.text-color-primary{color: $color-primary;}
+.text-color-option{color: $color-option;}
+.text-color-text{color: $color-text;}
+
+.bg-primary{background: $color-primary;}
+.bg-sub{background: $color-sub;}
+.bg-text{background: $color-text;}
+.bg-main{background: $color-main;}
+.bg-border{background: $color-border;}
+.bg-light-border{background: $color-light-border;}
+
+.bg-success{background: $color-success;}
+.bg-warning{background: $color-warning;}
+.bg-danger{background: $color-danger;}
+.bg-error{background: $color-border;}
+
+.color-chip{
+	border: 2px #fff solid;
+	border-radius: 4px; 
+	display: inline-block;
+	height: 32px;
+	width: 32px;
+}
